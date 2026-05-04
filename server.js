@@ -14,7 +14,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://127.0.0.1:5173'], // adjust if your frontend runs on a different port
+    origin: ['http://localhost:5173', 'http://127.0.0.1:5173', process.env.FRONTEND_URL], 
     credentials: true
 }));
 app.use(express.json());
